@@ -21,7 +21,7 @@ function createCard({ name, link }, deleteCardCallback) {
     return cardItem;
 }
 
-function renderCard() {
+function renderInitialCards() {
     const placeList = document.querySelector('.places__list');
     initialCards.forEach(({ name, link }) => {
         const card = createCard({ name, link }, deleteCard);
@@ -33,7 +33,8 @@ function deleteCard(cardItem) {
     cardItem.remove();
 }
 
-renderCard();
+renderInitialCards();
+
 
 
 
