@@ -4,13 +4,13 @@ export function openModal(popup) {
     // Добавляем обработчик закрытия попапа при нажатии клавиши Escape
     document.addEventListener('keydown', handleEscClose);
     // Добавляем обработчик закрытия попапа при клике на оверлей
-    popup.addEventListener('click', handleOverlayClick);
+    popup.addEventListener('mousedown', handleOverlayClick);
 }
 
 export function closeModal(popup) {
     popup.classList.remove('popup_is-opened');
     document.removeEventListener('keydown', handleEscClose);
-    popup.removeEventListener('click', handleOverlayClick);
+    popup.removeEventListener('mousedown', handleOverlayClick);
 }
 
 // Функция для закрытия попапа при нажатии клавиши Esc
