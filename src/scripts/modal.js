@@ -5,13 +5,13 @@ export function openModal(popup) {
     document.addEventListener('keydown', handleEscClose);
     // Добавляем обработчик закрытия попапа при клике на оверлей
     popup.addEventListener('mousedown', handleOverlayClick);
-}
+};
 
 export function closeModal(popup) {
     popup.classList.remove('popup_is-opened');
     document.removeEventListener('keydown', handleEscClose);
     popup.removeEventListener('mousedown', handleOverlayClick);
-}
+};
 
 // Функция для закрытия попапа при нажатии клавиши Esc
 function handleEscClose(evt) {
@@ -21,11 +21,11 @@ function handleEscClose(evt) {
             closeModal(openPopup);
         }
     }
-}
+};
 
 // Функция для закрытия попапа при клике на оверлей
 function handleOverlayClick(event) {
     if (event.target.classList.contains('popup')) {
         closeModal(event.target);
     }
-}
+};
